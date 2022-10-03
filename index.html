@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/js.js"></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <!--<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>-->
+
+    <!-- EN LA PAGINA PRINCIPAL PREGUNTA LA EDAD AVISA SI ES APTO O NO PARA DONAR PERO PERMITE SEGUIR SEGUN LO SOLICITADO    -->
+    <script>
+
+      // ES SCRIPT SOLO ES PARA VERIFICAR PEDIR Y VERIFICAR LA EDAD
+
+      var edad = 0;
+      var control = true;
+      edad = parseInt(prompt("Ingrese su edad"));
+      control = isNaN(edad);
+      while (control) {
+        edad = parseFloat(prompt("No ha ingresado un valor válido"));
+        control = isNaN(valor);
+      }
+      if (edad >= 18 && edad <= 65) {
+        alert("Ok, está habilitado para donar");
+      } else {
+        alert(
+          "Ud. es menor de 18 o mayor de 65, puede ingresar pero no registrarse"
+        );
+      }
+    </script>
+    <title>Proyecto Rev. Digital</title>
+  </head>
+<!-- PAGINA DE INTRODUCCION CON UN ACCESO A LAS PAGINA REQUISITOS DESDE AHI SE MUEVE POR TODA LA WEB-->
+  <body class="intro">
+    <main class="intro1">
+      <img
+        id="logo"
+        src="/images/donar-sangre-article.jpg"
+        alt="Donar es Vida"
+      />
+      <h1 id="cabecera">Donar Sangre es vida</h1>
+      <strong id="cabecera2"
+        >REGISTRO DE DONANTES DE SANGRE DE SAN NICOLAS</strong>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div id="entrada">
+      <a class="entrar" href="/pages/requisitos.html">Ingrese Aquí</a></div>
+      <br />
+    </main>
+    <footer>
+     <!-- EL FOOTER ES EL MISMO EN TODAS LAS PAGINAS-->
+      <p id="pie">Sitio Realizado por Hugo Oscar Paz<a id="correo" href="mailto:hugooscarpaz@gmail.com">mailto:hugooscarpaz@gmail.com</a><a href="https://wa.me/3364214193?text=¡Estoy+interesado!"><img src="/images/wsp.png" width="20px"></a></p>
+     
+      <br />
+      <br />        
+  </footer>
+  </body>
+</html>

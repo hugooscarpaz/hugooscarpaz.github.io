@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/js.js"></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+      />
+    <title>Donar es vida - registro</title>
+  </head>
+  <!--EL FORMULARIO DE REGISTRO ESTA COMO MODELO YA QUE NO GRABA A NINGUNA BASE DE DATOS, PENSE EN USAR UN ARRAY DE OBJETOS, PERO NO ME ALCANZÓ EL TIEMPO-->
+
+  <body>
+    <header>
+      <img
+        id="logo2"
+        src="/images/donar-sangre-article.jpg"
+        alt="Donar es Vida"
+      />
+      <h1 id="titulos">Donar Sangre es vida</h1>
+      <nav>
+        <hr />
+        <br />
+        <div id="navegador">
+          <ul>
+            <li><a href="/pages/requisitos.html">Requisitos</a></li>
+            <li><a href="/pages/acerca_de.html">Acerca de Nosotros</a></li>
+            <li><a href="/pages/Registrese.html">Registrese</a></li>
+            <li><a href="/pages/Centros.html">Solo Centros</a></li>
+            <li><a href="/pages/Contactenos.html">Contactenos</a></li>
+            <li><a id="salir" onclick="salir()" href="#"><b>Salir de la pagina</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h2 id="tituform">Formulario de Registro</h2>
+      <form  action="" method="post" >
+        <!-- EN EL FORMULARIO QUISE PONER DOS FUNCIONES PARA CONTROLAR LA EDAD SEGÚN LA FECHA DE NACIMIENTO Y QUE LA FECHA DE LA ÚLTIMA DONACION NO SEA MAYOR A LA FECHA DEL DIA
+        RECIEN HACE UN RATO, COMO NO ME FUNCIONABA, PENSE QUE LO MEJOR HUBIESE SIDO PREGUNTAR LA LA FECHA DE NACIMIENTO APENAS CLICKABA EN REGISTRESE Y SI NO ERA APTO NO INGRESABA, PERO YA NO ME DABAN EL TIEMPO-->
+        <div id="f_registro">
+          <label for="nombres">Nombre:                            <input id="nombres" type="text" name="nombre" required /></label><br />
+          <label for="apellido" >Apellido:                           <input id="apellido" type="text" name="apellido" required /></label><br />
+          <label for="fecnac" >Fecha Nacimiento:              <input id="fecnac" type="date" name="fechanac" required value="calcula_age(fecnac)" /></label><br />
+          <label for="ultfec" >Fecha última donación:     <input id="ultfec" type="date" name="fechadonar" required  value="fechadon(ultfec)"/></label><br />
+          <label for="mail" >Correo Electrónico:           <input id="mail" type="email" name="email" required /></label><br />
+          <label fpr="celu" >Teléfono:                           <input id="celu" type="tel" name="nrocel" min"1000000000" required></label><br />
+
+          <br />
+          <h3>Grupo Sanguineo y Factor</h3>
+          <div id="s_pos">
+            <!--Podría haber puesto dos menú descolgables una con el grupo y otro con el factor-->
+            <label for="grupo">Su grupo</label>
+            <select id="grupo" name="grupo">
+              <option value="A+">A Positivo</option>
+              <option value="B+">B Positivo</option>
+              <option value="0+">0 Positivo</option>
+              <option value="AB+">AB Positivo</option>
+              <option value="A-">A Negativo</option>
+              <option value="B-">B Negativo</option>
+              <option value="0-">0 Negativo</option>
+              <option value="AB-">AB Negativo</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="Enviar" />  <!-- MI IDEA ERA QUE SI NO ERA APTO ESTE BOTON QUEDARA INHABILITADO-->
+            <input type="reset" value="Cancelar" />
+          </div>
+        </div>
+      </form>
+
+      <br />
+    </main>
+    <aside></aside>
+    <footer>
+   <!-- EL FOOTER ES EL MISMO EN TODAS LAS PAGINAS-->
+   <p id="pie">Sitio Realizado por Hugo Oscar Paz<a id="correo" href="mailto:hugooscarpaz@gmail.com">mailto:hugooscarpaz@gmail.com</a><a href="https://wa.me/3364214193?text=¡Estoy+interesado!"><img src="/images/wsp.png" width="20px"></a></p>
+     
+   <br />
+   <br />   
+    </footer>
+  </body>
+</html>
